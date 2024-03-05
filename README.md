@@ -24,3 +24,11 @@ Target | float？ | 目标位置
 Position | float？ | 电机当前位置，一般由下位机返回
 
 > `?` 表示可能为 null
+ 
+> 注意：各字段是首字母大写的形式
+
+### 示例
+
+```json
+{"Mode":1,"Speed":null,"MaxSpeed:5.0","Acceleration":1.0,"Target":20,"Position":null}
+```
