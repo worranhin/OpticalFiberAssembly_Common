@@ -30,5 +30,5 @@ Position | float？ | 电机当前位置，一般由下位机返回
 ### 示例
 
 ```json
-{"Mode":1,"Speed":null,"MaxSpeed:5.0","Acceleration":1.0,"Target":20,"Position":null}
+{"Mode":1,"Speed":null,"MaxSpeed":5.0,"Acceleration":1.0,"Target":20,"Position":null}
 ```
