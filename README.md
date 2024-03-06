@@ -16,7 +16,8 @@
 
 名称 | 类型 | 描述
 --- | --- | ---
-Mode | enum | 可能的值为：0: STOP, 1: RUN, 2: RUN_SPEED, 3: STATUS (获取状态), 4: Zero (置零)
+Mode | enum | 见下文
+DeviceId | byte | 设备码，下文定义
 Speed | float？ | 速度
 MaxSpeed | float？ | 最大速度
 Acceleration | float？ | 加速度
@@ -27,8 +28,31 @@ Position | float？ | 电机当前位置，一般由下位机返回
  
 > 注意：各字段是首字母大写的形式
 
+#### Mode
+
+`Mode` 的合法值如下表所示：
+
+值 | 推荐名称 | 说明
+--- | --- | ---
+0 | STOP | 停止运行
+1 | RUN | 运行至目标点
+2 | RUN_SPEED | 按给定速度运行
+3 | STATUS | 获取状态
+4 | ZERO | 当前位置置零
+
+#### DeviceId
+
+`DeviceId` 定义设备码，在这里统一规定各个设备的设备码：
+
+设备名称 | Id
+--- | --- 
+三自由度平移台 - x 轴 | 1
+三自由度平移台 - y 轴 | 2
+三自由度平移台 - z 轴 | 3
+
+
 ### 示例
 
 ```json
-{"Mode":1,"Speed":null,"MaxSpeed":5.0,"Acceleration":1.0,"Target":20,"Position":null}
+{"Mode":1,"DeviceId":1,"Speed":null,"MaxSpeed":5.0,"Acceleration":1.0,"Target":20,"Position":null}
 ```
