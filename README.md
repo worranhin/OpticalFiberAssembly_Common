@@ -16,7 +16,7 @@
 
 名称 | 类型 | 描述
 --- | --- | ---
-Mode | enum | 可能的值为：0: STOP, 1: RUN, 2: RUN_SPEED, 3: STATUS (获取状态)
+Mode | enum | 可能的值为：0: STOP, 1: RUN, 2: RUN_SPEED, 3: STATUS (获取状态), 4: Zero (置零)
 Speed | float？ | 速度
 MaxSpeed | float？ | 最大速度
 Acceleration | float？ | 加速度
